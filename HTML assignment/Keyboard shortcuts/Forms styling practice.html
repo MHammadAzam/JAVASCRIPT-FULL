@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+            /* background-color: purple; */
+            background-image:url(30-Days-Social-Media-Marketing-Contact-Form-Background-3118362182.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+        .header{
+            text-align: center;
+            
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+              width: 100%;
+              padding: 10px;
+              border-radius: 5px;
+              border: 1px solid grey;
+              margin-top: 6px;
+              margin-bottom: 16px;
+              resize: vertical;
+        }
+        input[type="submit"]{
+            background-color: rgb(18, 126, 45);
+            color: white;
+            width: 100%;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        .container{
+            border-radius: 5px;
+            /* background-color: #f2f2f2; */
+            border: 4px solid rgb(248, 247, 247);
+            padding: 32px;
+            border-radius: 8px;
+        }
+        
+        input[type="submit"]:hover{
+            color:rgb(194, 179, 179);
+            background-color: rgb(10, 10, 10);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form action="">
+        <h2 class="header">CONTACT US</h2>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required><br>
+
+        <label for="Email">Email</label>
+        <input type="text" name="email" id="email" required placeholder="Enter your Email"><br>
+
+        <label for="text">Message</label>
+        <textarea name="text" id="text" rows="8" cols="15">Enter a Message</textarea><br>
+
+        <input type="submit" value="Send">
+    </form>
+    </div>
+</body>
+</html>

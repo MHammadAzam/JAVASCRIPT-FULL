@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color: blue;
+        }
+        .class1 a{
+            color: inherit; /*so color is inherited from body*/
+        }
+
+        .class2{
+            color: initial;
+        }
+        .class3{
+            color: unset;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+    <!-- so by default the color of li is black and the color of link is purple -->
+    <li>Default <a href="">Link</a> color</li>
+    <li class="class1">Inherited <a href="">Link</a> color</li>
+    <li class="class2">Initial <a href="">link</a> color</li>
+    <li class="class3">Unset <a href="">link</a> color</li>
+    </ul>
+</body>
+</html>

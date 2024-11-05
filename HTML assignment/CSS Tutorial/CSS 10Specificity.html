@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity,Cascading</title>
+    <style>
+         .fav{
+            color: red;
+            font-weight: bold;
+            font-size: larger;
+         }
+/*we selected a class fav and styled it for just on li but then we selected whole ul list and the property we wrote in ul is showing hiding the class (fav) so this is SPECIFICTY.... */
+         ul#summer-drinks li{
+           font-size: large;
+           color: black;
+           font-weight:normal;
+         }
+
+    </style>
+</head>
+<body>
+    <ul id="summer-drinks">
+        <li>Mounain Dew</li>
+        <li>Appy Fizz</li>
+        <li class="fav">Cola-Next</li>
+    </ul>
+</body>
+</html>

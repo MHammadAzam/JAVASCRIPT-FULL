@@ -9,6 +9,26 @@ arr.shift(0) // Removes  the first element of the array
 console.log(arr.indexOf(3)); // will show index of number
 console.log(arr.includes(11)); // will show if the given number is present in the array or not
 
+const newArray = arr.join(); // join converts array into String and also values are printed without Square Brackets. 
+console.log(newArray);
+
+console.log("A ", arr);
+const myN1 = arr.slice(1 , 3)
+console.log(arr);// Also in slice the orignal  array is not changed.
+console.log(myN1); // AS u see in slice the range  is 1 to 3 so it will print 2,3.
+
+
+console.log("B " , arr);
+const myN2 = arr.splice(1, 3)
+console.log(arr); // In splice the  original array is changed.( 2, 3, 4 is removed from array)
+console.log(myN2); // In splice  the range is 1 to 3 so it will print 2, 3, 4
+
+
+// to combine 2 arrays into 1 array ,  we can use concat() method and also SPREAD  OPERATOR [MOSTLY USED]
+let arr1 = [1, 2, 3]
+let arr2 = [4, 5, 6]
+console.log(arr1.concat(arr2)); // concat used to  combine 2 arrays into 1 array
+console.log([...arr1, ...arr2]); // spread operator is used here to combine 2
 
 
 

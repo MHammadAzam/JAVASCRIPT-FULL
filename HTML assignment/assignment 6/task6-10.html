@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+     .para{
+        color: blue;
+        color: rgb(35, 30, 73);
+        font-style: oblique;
+        text-align: center;
+        line-height: 30px;
+        letter-spacing:3px;
+        transform: rotateX(45deg);
+        transform: rotateY(45deg);
+        text-decoration: line-through;
+     }
+     h1+p{
+        background-color: rgba(0, 255, 179, 0.664);
+        opacity: 0.6;
+        color: #e28743; /*hex code*/
+        font-weight: 700;
+        font-size: x-large;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        word-spacing: 5px;
+        
+     }
+     h1{
+        color: hsl(0, 82%, 43%);
+     }
+     .blue::first-letter{
+             font-size: xx-large;
+             color: brown;
+     }
+     .blue::first-line{
+            background-color: cadetblue;
+            height:fit-content;
+     }
+     .hover:hover{
+        background-color: tomato;
+        margin: 4px;
+     }
+     .link:link{
+        color: #e28743;
+        text-decoration: none;
+     }
+     .visited:visited{
+        /* it changes color whenever the link is visited by you */
+        background-color: chartreuse;
+     }
+     input:focus {
+        /* when you focus on text area bg color will change */
+        background-color: rgb(174, 164, 184);
+     }
+     a:active{
+        /* By clicking link it will change color */
+        background-color: yellow;
+     }
+    </style>
+</head>
+<body>
+    <!-- task 6,7,8: colors, -->
+    <h1>heading</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quam incidunt inventore quos impedit eveniet, amet sequi hic rem? Voluptas totam blanditiis nihil, odit facilis enim optio tempora minus mollitia ex soluta eos magni laboriosam iste magnam nesciunt aliquam possimus, aut deserunt velit?</p>
+    <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi cumque, eos magni omnis, animi earum fugiat excepturi est at, molestias magnam! Placeat eius, dolores fugit nulla assumenda dignissimos odit tempora commodi, provident accusamus ab, atque nostrum distinctio. Doloribus vero dignissimos quia?</p>
+
+    <p class="blue">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae tempore similique aliquid eaque natus sunt quisquam amet laboriosam maiores cum molestias corporis quo officia id, eum, suscipit quidem mollitia laudantium libero facilis commodi maxime? Perferendis consequatur quia at consequuntur veniam.</p>
+
+    <!-- Task 9: pseudo classes -->
+   <button> <a class="link" href="www.google.com">Google</a></button>
+   <button> <a class="visited" href="https://imagecolorpicker.com/">Colorpicker</a></button>
+   <button> <a class="hover" href="https://www.w3schools.com">w3schools</a></button>
+   
+   <form>
+    <label for="name">name:</label>
+       <input type="text">
+   </form>
+</button>   
+
+</body>
+</html>

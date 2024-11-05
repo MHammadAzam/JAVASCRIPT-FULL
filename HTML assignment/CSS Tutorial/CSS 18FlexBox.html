@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            line-height: 1.4;
+            padding: 0 20px 30px 0;
+            align-content:space-around;
+        }
+        /* Flex properties */
+        .flex{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content:space-around;
+        }
+        .flex_item{
+            width: 50px;
+            border: 1px solid black;
+            padding: 15px 10px 15px 20px;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+            
+         #flex_item1{
+            background-color: aqua;
+            /* this property is used on particular child class */
+            /* used to change order */
+            order: 5;
+        }
+
+        #flex_item2 {
+            background-color: yellowgreen;
+            /* used as width controller */
+            flex-basis: 200px;
+
+            /* used to grow this element 2 times the other element */
+            flex-grow: 2;
+            /* used to shrink thi element 2 times th other element */
+            flex-shrink: 2;
+        }
+
+        #flex_item3 {
+            background-color: yellow;
+        }
+
+        #flex_item4 {
+            background-color: tomato;
+
+            /* used to make element in center */
+            align-self: center;
+        }
+
+        #flex_item5 {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="flex_item" id="flex_item1">1</div>
+        <div class="flex_item" id="flex_item2">2</div>
+        <div class="flex_item" id="flex_item3">3</div>
+        <div class="flex_item" id="flex_item4">4</div>
+        <div class="flex_item" id="flex_item5">5</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    .one{
+       width: 300px;
+       height: 200px;
+       background-color: red;
+       transition: 4s ease-in-out;
+    }
+    .two{
+        width: 300px ;
+        height: 200px;
+        background-color: blue;
+    }
+    </style>
+</head>
+<body>
+    <div class="two">
+        <h1>HEADER</h1>
+    </div>
+    <div class="one" id="one">
+        <p>BODY</p>
+    </div>
+
+    <button onclick="something()"> Called </button>
+
+    <script> // now to access the data in the html tag using js use dom manipulation.
+    // Document is actually the whole tree of html and css
+    // To make changes in html element using JS use innerHTML.
+
+    function something()
+    {
+        document.getElementById("one").innertext="soemthing new";
+        document.getElementById("one").innerHTML="soemthing new";
+
+        // TO CHANGE CSS USING JS.
+        document.getElementById("one").style.width="400px";
+        document.getElementById("one").style.backgroundColor="green";
+        document.getElementById("one").style.marginLeft="300px";
+        document.getElementById("one").style.transform="rotateZ(200000deg)"; // For spinning element
+    }
+    
+
+    </script>
+</body>
+</html>

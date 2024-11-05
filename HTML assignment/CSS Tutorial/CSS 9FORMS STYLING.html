@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        box-sizing:border-box;
+      }
+      body{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 17px;
+        margin: 15px 30px;
+        padding: 50px;
+      }
+      .container{
+        background-color: #f2f2f2;
+        padding: 5px 20px 15px 20px ;
+        border: 1px solid lightgray;
+        border-radius: 3px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[number="number"],
+      input[type="date"],
+      select,
+      textarea
+      {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      fieldset{
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+     .main_heading{
+          text-align: center;
+     }
+     input[type="submit"]{
+          background-color: rgb(65, 143, 65);
+          color: white;
+          height: 25px;
+          border-radius: 5px solid green;
+          border: none;
+          cursor: pointer;
+     }
+     input[type="submit"]:hover{
+          color: rgb(215, 197, 238);
+          background-color: black;
+     }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <form class="container">
+        <h2 class="main_heading">Payment Options</h2><hr>
+        <h3>User Information</h3>
+       <label for="Name">Name:</label>
+       <input type="text" id="Name" placeholder="Enter Your Name"><br><br>
+
+<fieldset>
+      <legend>Gender</legend>
+       <input type="radio" name="Male" >Male
+       <input type="radio" name="Female" id="">Female
+</fieldset><br><br>
+
+<label for="Text">Adress:</label>
+<textarea name="Text" id="Text" rows="10">Enter your Adress</textarea><br><br>
+
+<label for="Mail">Email:</label>
+<input type="email" name="Mail" id="Mail" placeholder="abc123@gmail.com" ><br><br>
+
+<label for="pincode">Pincode:</label>
+<input type="password" name="pincode" id="pincode" placeholder="123456">
+
+<h2>Payment Options</h2>
+<label for="Card type">Card Type:</label>
+<select name="card" id="card"required="required">
+    <option value="">Easypaisa</option>
+    <option value="">JazzCash</option>
+    <option value="">Debit card</option>
+</select><br><br>
+
+<label for="Card">Card Number: </label>
+<input type="text" name="Crard" id="Card" placeholder="Enter Card Number" required="required"><br><br>
+
+<label for="Date">Expiration Date:</label>
+<input type="date" name="Date" id="Date"><br><br>
+
+<label for="CVV">CVV:</label>
+<input type="text" name="Cvv" id="Cvv" placeholder="123"><br><br>
+
+<input type="submit" value="Pay now">
+    </form>
+</body>
+</html>
