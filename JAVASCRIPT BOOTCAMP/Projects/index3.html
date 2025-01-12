@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess A Number</title>
+    <style>
+        h3 {
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        input {
+            height: 25px;
+            width: 30vh;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Number Guessing Game </h3>
+    <div class="container">
+        <p>Try and guess a random number between 1 and 100</p>
+        <p>You have 10 attempts to guess the right number</p>
+        <h1>Guess a number</h1>
+        <input type="text" id="guessField" class="guessField"> <br>
+        <input type="submit" value="Submit guess" id="subt" class="guessSubmit">
+    </div>
+    <div class="resultParas">
+        <p>Previous Guesses: <span class="guesses"></span></p>
+        <p>Guesses Remaining: <span class="lastResult">10</span></p>
+        <p class="lowOrHigh"></p>
+    </div>
+</body>
+<script>
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    const Submit = document.querySelector('#subt');
+    const userInput = document.querySelector('#guessField');
+    const guesses = document.querySelector('.guesses');
+    const remaining = document.querySelector('.lastResult');
+    const lowOrHigh = document.querySelector('.lowOrHigh');
+    const startOver = document.querySelector('.resultParas');
+
+    const p = document.createElement('p')
+
+    let prevGuesses = [];// used to store the guesses.
+    let numGuess = 1
+
+    let playGame = true
+
+    if (playGame) {
+        Submit.addEventListener('click', function (e) {
+            e.preventDefault(); // This line prevents the default action associated with the click event from occurring. For example, if the button is inside a form, clicking it would normally submit the form, which might refresh the page. By calling preventDefault(), the code ensures that the page does not reload and the game can continue without interruption
+            const guess = parseInt(userInput.value)
+            validateGuess(guess) // function is called here used to check whether the gues is coreect or not
+        })
+    }
+
+
+    function validateGuess(guess) { // to check the input.
+        if (guess < 1 || guess > 100 || isNaN(guess)) {
+            alert("Please enter a number between 1 and 100")
+        }
+        else{
+           prevGuesses.push(guess)
+           if(numGuess === 11){
+            alert("Game Over! The number was " + numberToGuess)
+            endGame() // Function called
+           }
+           else{
+            displayGuess(guess) // function Called
+            checkguess(guess) // function called
+           }
+        }
+    }
+
+    function checkguess(guess) { // to check if number u guessed is correct or high or low from actual value.
+        if (guess === randomNumber) {
+         alert("you guessed it right")
+         endGame()
+        }
+        else if(guess < randomNumber) {
+           displayMessage("Number is Too Low")
+        }
+        else if(guess > randomNumber) {
+           displayMessage("Number is Too High")
+        }
+    }
+
+    function displayGuess(guess) { // it will clean values you enter , and update previous guesses.
+         userInput.value = ''
+         guesses.innerHTML +=` ${guess}, `;
+         numGuess++ ;
+         remaining.innerHTML = `${11 - numGuess}`
+    }
+
+    function displayMessage(Message) { // pass msg
+       lowOrHigh.innerHTML = `<h2>${Message}</h2>`
+    }
+
+    function endGame() {
+         userInput.value = '' //valuee cleaned
+         userInput.setAttribute('disabled', '') // so that no new value should be added.
+         p.classList.add('button')
+         p.innerHTML = '<h2 id="newGame"> Start New Game</h2>'
+         startOver.appendChild(p) // adding a child
+         playGame = false // to stop the game
+         newGame()
+    }
+
+    function newGame() {
+    const newGameButton = document.querySelector('#newGame')
+    newGameButton.addEventListener('click', function(e){
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+        prevGuesses = []
+        numGuess = 1
+        guesses.innerHTML = ''
+        remaining.innerHTML = `${11 - numGuess}`
+        userInput.removeAttribute('disabled') 
+        startOver.removeChild(p)
+        playGame = true
+    })
+    }
+
+
+</script>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        async function Weather() {
+              let peshWeather = new Promise((resolve, reject)=>{
+                      setTimeout(()=>{
+                           resolve("30 Deg")
+                      }, 2000)
+                    })
+              let KarachiWeather = new Promise((resolve, reject)=>{
+                      setTimeout(()=>{
+                           resolve("20 Deg")
+                      }, 4000)
+              })
+
+              let peshW = await peshWeather
+              let KarachiW = await KarachiWeather
+              return [peshW,KarachiW]
+                    }
+             let a =  Weather()      
+             console.log(a);
+             
+    </script>
+</body>
+</html>

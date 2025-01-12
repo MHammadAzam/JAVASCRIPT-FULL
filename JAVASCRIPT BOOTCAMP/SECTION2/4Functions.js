@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <script>
+
   // DIFFERNCE BETWEEN "LET" AND "VAR"...........
-  // var is funstion scoped---------whatever you create using VAR it will be accesible in whole function.
+  // var is function scoped---------whatever you create using VAR it will be accesible in whole function.
   // let is block scoped------------if you make a variable using LET it will not accesible in whole function.
 
-  dummy();
+  
     function dummy(){
        let a = 1;  // USE LET VARIABLE IN JAVASCRIPT.
         if(true){
@@ -21,17 +12,17 @@
         }
         console.log(a);
     }
-
+    dummy();
 
 
   // FUNCTIONS........BLOCK OF CODE WHICH DOESNT CALL AUTOMATICALLY
     
     function student(name)    // student=()=> {    }  this is also a way of defining a function called ARROW FUNTION...
     {
-       console.log("hi "+ name);
+       let Name = ("hi  " , name)
+       return Name
     }
  
-    student("Hammad");
-    </script>
-</body>
-</html>
+   let result = student("Hammad");
+   console.log(result);
+   

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>javascript</li>
+        
+    </ul>
+</body>
+<script>
+    // EDIT AND REMOVE ELEMENTS IN DOM
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        const doc = document.querySelector(".language")
+        doc.appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("C++")
+    addLanguage("Typerscript")
+
+    // Optimized way to add any elemnt to the DOM
+    function addOptimizedLang(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptimizedLang("GoLang")
+
+    //1) EDIT ELEMENT IN DOM
+    const secondLang = document.querySelector('li:nth-child(2)');
+    secondLang.innerHTML = "gojo"
+
+    //2) EDIT ELEMENT IN DOM
+    const newLi = document.createElement('li')
+    newLi.textContent = "mojo"
+    secondLang.replaceWith(newLi)
+
+    //3) EDIT ELEMENT IN DOM
+    const FirstLang = document.querySelector('li:first-child')
+    FirstLang.outerHTML = '<li>TYPESCRIPT</li>'
+
+
+    // REMOVE ELEMENT FROM DOM
+    const removeLang = document.querySelector('li:nth-child(5)')
+    removeLang.remove()
+</script>
+</html>

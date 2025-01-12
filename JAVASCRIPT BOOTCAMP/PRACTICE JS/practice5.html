@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // (1) LOADING A FUNCTION USING ASYNC AND AWAIT
+        const loadscript = async (src) => {
+            return new Promise((resolve, reject) => {
+                let script = document.createElement("script")
+                script.src = src
+                script.onload = () => {
+                    resolve(src)
+                }
+                document.body.append(script)
+            })
+        } 
+        const main2 = async ()=>{  
+            let a = await loadscript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js")
+            console.log(a);
+            
+        }
+        // main2()
+        //(2) loading a function using .then
+        // const loadscript2 = async (src) => {
+        //     return new Promise((resolve, reject) => {
+        //         let script = document.createElement("script")
+        //         script.src = src
+        //         script.onload = () => {
+        //             resolve(src)
+        //         }
+        //         document.body.append(script)
+        //     })
+        // } 
+        // let b =  loadscript2("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js")
+        // b.then((value)=>{
+        // console.log("script loaded")
+        // console.log(value);
+        // })
+
+
+        // (3) 
+    //     let p1 = () => {
+    //         return new Promise((resolve, reject)=>{
+    //             setTimeout(()=>{
+    //                 reject(new Error("This is an error"))
+    //             })
+    //     })
+    // }
+    // let c = async ()=>{
+    //     try {
+    //       let pr1 =  await p1()
+    //       console.log(pr1);  
+    //     } catch (error) {
+    //         console.log("Error handled");
+            
+    //     }
+    // }
+    // c()
+
+    
+    
+    </script>
+</body>
+
+</html>

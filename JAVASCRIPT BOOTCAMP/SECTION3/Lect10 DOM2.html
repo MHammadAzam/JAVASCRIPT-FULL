@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="paren">
+        <div class="day">Monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+
+    <script>
+     const parent =document.querySelector('.paren')
+     console.log(parent);
+     // to find out how many children have this parent.
+
+      console.log(parent.children);
+      console.log(parent.children[1].innerHTML);
+      for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);
+        
+      }
+
+    // For example if you have to change styling in an innerhtml document use this below:
+    parent.children[0].style.color= "red";
+
+    // To access each element of the parent use this below:
+    console.log(parent.firstElementChild);
+
+    //To check Nodes present in the parent use this below:
+    console.log(parent.childNodes);
+    
+
+    </script>
+
+</body>
+</html>

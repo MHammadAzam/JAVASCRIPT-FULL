@@ -1,3 +1,7 @@
+// TRUTHY VALUES: True, 1 , [] , "0" , 'false' , " ", {} , function(){}
+// FALSY VALUES: false , 0 , -0 , bigint(0n) , "" , null , undefined, Nan 
+
+
 // IF CASE
 let connection = 3;
 if(connection === 5){
