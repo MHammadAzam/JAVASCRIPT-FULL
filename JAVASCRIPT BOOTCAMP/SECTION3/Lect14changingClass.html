@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yellow{
+           background-color: yellow;
+        }
+        .text-dark{
+            color: black;
+        }
+        .red{
+            color: white;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+     <div id="first" class="yellow text-dark">
+        <span>Hey i am good</span>
+     </div>
+
+    <script>
+     first.className = "text-black red"; // to add any other class using javascript
+     console.log(first.classList); 
+     first.classList.remove('red') // To remove anynof the current classes from any element
+     first.classList.add('yellowBg') // adds a class to the element
+     first.classList.contains('red')  // used to check if the class in already present or not.
+     // document.getElementById('first').setAttribute("class", "red") // another way to create a class
+
+    </script>
+</body>
+</html>

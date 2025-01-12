@@ -80,11 +80,19 @@ numbers.forEach( (num) => {    // If curly braces are on then u have to return v
   console.log(Mynum)
 
   
-// MAPS
+// 8) MAPS
 
-const map = new Map()
-map.set('PK', 'Pakistan')
-map.set('Fr', 'France')
-map.set('Aus', 'Australia')
+const map = new Map()    // MAP IS USED TO CREATE A NEW ARRAY AND FOR EACH IS USED TO APPLY LOOP ON EXISTING ARRAY. 
+map.set('PK', 'Pakistan')           // let array = [1,2,3,4,5,6,7] 
+map.set('Fr', 'France')             // let a = array.map( (value) => {      
+map.set('Aus', 'Australia')         //   )}
 
 console.log(map)
+
+// 9) REDUCE
+let arr3 = [1,4,6,8,9,12]
+let sum = arr3.reduce( (acc, current) => {  // acc is accumulator and current is current value.
+   
+  return (acc + current)
+})
+console.log(sum);

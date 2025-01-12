@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // PROMISES used thake cheeze asynchronously hojae.
+       // Each promise has two properties:
+       // 1) STATE: initially state is pending then changes to either fulfilled when resolve is called or rejected when reject is called
+       // 2) Result: initially it is undefined, then changes to value if resolved or error when rejected
+        let promise1 = new Promise(function (resolve, reject){
+            console.log("Promise is pending")
+            setTimeout(()=>{
+                 alert("I am a promise and i am Resolved")
+                 resolve(true) // used to give a value
+            }, 3000)
+        })
+        
+        let promise2 = new Promise(function (resolve, reject){
+            console.log("Promise is pending")
+            setTimeout(()=>{
+                 alert("I am a promise and i am Rejected")
+                 reject(new Error("I am an error")) // used to give an error
+            }, 3000)
+        })
+
+        // to print value of the promise1 resolve use then
+        promise1.then((value)=>{
+             console.log(value);      
+        })
+
+        // to catch the error in promise2 and you want to resolve that error and no error show in console use error
+        promise2.catch((error)=>{
+            console.log("The Error is being Catched")
+        })
+
+    </script>
+</body>
+</html>

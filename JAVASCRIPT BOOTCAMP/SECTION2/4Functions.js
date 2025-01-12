@@ -17,7 +17,7 @@
 
   // FUNCTIONS........BLOCK OF CODE WHICH DOESNT CALL AUTOMATICALLY
     
-    function student(name)    // student=()=> {    }  this is also a way of defining a function called ARROW FUNTION...
+   function student(name)    // student=()=> {    }  this is also a way of defining a function called ARROW FUNTION...
     {
        let Name = ("hi  " , name)
        return Name
@@ -25,4 +25,15 @@
  
    let result = student("Hammad");
    console.log(result);
+   
+
+
+   function onePlusAve(a, b){
+        return 1 + (a+b)/2   
+   }
+   console.log(onePlusAve(2,20));  
+   console.log(onePlusAve(3,20));  
+   console.log(onePlusAve(4,20));
+   console.log(onePlusAve(5,20));
+    
    

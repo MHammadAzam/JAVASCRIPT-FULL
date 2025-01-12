@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+     setTimeout(function(){
+        console.log("hammad");   
+     }, 2000) //2000 miliseconds = 2s, after 2s name will be executed just one time.
+
+const changeText =function(){ 
+    document.querySelector('h1').innerHTML = "BEST MAN IN WORLD HAZRAT MUHAMMAD (PBUH)"
+}
+
+const changeMe = setTimeout(changeText, 2000)
+
+// clearTimeout(changeMe) // to clear the timeout function
+
+document.querySelector('#stop').addEventListener('click', function(){
+    clearTimeout(changeMe) // to clear the timeout function after pressing the button
+    alert("STOPPED");
+    
+})
+
+</script>
+</html>

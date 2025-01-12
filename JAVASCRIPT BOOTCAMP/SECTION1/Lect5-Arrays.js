@@ -36,3 +36,4 @@ let student2 = {
 
 console.log(student1.Name); // Objects are called by a (DOT.)
 console.log(student2.city); // Objects are called by a (DOT.)
+

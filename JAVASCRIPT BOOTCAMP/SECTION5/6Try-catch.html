@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // ERROR HANDLING
+        setTimeout(() => {
+            // console.log("Hacking Wifi.....please wait");
+
+        }, 1000)
+
+        //    console.log(hammad); // will show error bcz hammad not defined only 1st setTimeout will run, now if we want to run all setTieouts without showing any error on console then we can use try catch block
+        // try {
+        //     console.log(hammad);
+        // }
+        // catch(error){
+        //    console.log("No error");
+        // }
+
+        // setTimeout(() => {
+        //     console.log("Fetching Username and Password");
+
+        // }, 2000)
+        // setTimeout(() => {
+        //     console.log("Hacking facebook id....");
+
+        // }, 3000)
+
+
+        // ERROR OBJECT AND CUSTOM ERRORS
+        // TWO MAIN PROPERTIES ARE PRESNT : NAME AND MESSAGE
+
+        // try {
+        //     console.log(hammad);  // will show error bcz hammad not defined
+            
+        // } catch (error) {
+        //     console.log(error.name);   // referenceError
+        //     console.log(error.message);  // hammad is not defined
+            
+        // }
+
+
+        // ALSO YOU CAN THROW ERRORS.....
+        try {
+             let age = 150
+             if(age > 120){
+                throw new ReferenceError("This is probably not possible")
+             }
+        } catch (error) {
+            console.log(error.name);
+            console.log(error.message);
+            console.log(error.stack);
+            
+        }
+        console.log("IT is still running..... ");
+        
+    </script>
+</body>
+
+</html>

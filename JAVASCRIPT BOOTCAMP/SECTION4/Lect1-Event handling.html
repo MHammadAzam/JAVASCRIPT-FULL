@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="print()">Click</button> <!-- button is the event handler -->
+    <ul id="images">
+        <li id="nature">https://www.pexels.com/photo/scenic-train-journey-through-lush-green-forest-29175909/</li>
+        <li id="goat">https://www.pexels.com/photo/rural-landscape-with-fallow-deer-and-farmhouse-28935696/</li>
+    </ul>
+
+    <script>
+        // EVENT HANDLING---MEANS WHEN YOU HOVER,CLICK,SCROLL ON WEBSITE YOU ARE PERFORMING AN EVENT...
+        // 3 component
+        // (1)Event 
+        // (2)EVENT HANDLER
+        // (3)EVENT LISTENER
+        
+        function print()  // This function is the event listener
+        {
+            console.log("you clicked")
+            document.querySelector('body').innerHTML = "YOU HAVE CLICKED"
+
+        }
+// so if you select the parent element i.e ul, and child element i.e li, and add an event on both of them , then you also add Bubbling mode i.e( False ) which is also by default, then by clicking on child element console will show first the text of child element and then the text of parent element, But if you add Capturing modemi.e( true ) then it will show the text of parent element first and then the child.
+        document.getElementById('images').addEventListener('click', function(e){ // Best Approach
+            console.log('images Clicked')
+            console.log(e); // e is the event object, to learn only(" Type, TimeStamp, defaultPrevented, Target, currentTarget, relatedTarget, toElement, srcElement, ClientX, ClientY, screeenX, screenY, altKey, ctrlKey, shiftKey, keyCode")
+            
+        }, false)
+// e.stopPropagation() is executed inside the event listener, it prevents the event from bubbling up the DOM tree, which means it will prevent the parent element from
+        document.getElementById('goat').addEventListener('click', function(e){ // Best Approach
+            console.log("Goat Clicked")
+            e.stopPropagation()
+            // e.preventDefault()
+        }, false)
+// ******************************************************************************************************************************************
+  document.querySelector('#images').addEventListener('click', function(e){
+          console.log(e.target.parentNode.remove()) // target is used to select the element, parentnode is used to select the parent of the element, remove used to remove the whole element.
+})
+        
+    </script>
+</body>
+</html>

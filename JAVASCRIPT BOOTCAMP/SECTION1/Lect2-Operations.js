@@ -1,6 +1,8 @@
 // Operators
 //Categories of Operators.
 
+console.log(null >= 0);// True bcz comparisons convert null into a number treating it as a 0.
+
 // (1) Binary Operators 2 operands
     // ARITHMATIC OPERATORS +,-,*,/,%
     let num1 =10;

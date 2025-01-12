@@ -15,8 +15,8 @@ console.log(jsUser.name);
 //2. bracket notation
 console.log(jsUser["Full name"]);
 
-   // INTERVIEW QUESTION
-//    TAKE A SUMBOL AND THEN PRINT IT
+// INTERVIEW QUESTION
+// TAKE A SUMBOL AND THEN PRINT IT
 const sym = Symbol("key1")
 const  obj = {
       [sym]: "value1" // Correct way to use symbol i.e in Square brackets
@@ -28,7 +28,7 @@ jsUser.Email = "Mhammadazam@chatgpt.com" // Email changed
 
 // To Lock a Value so that it cant be changed in future use.
 Object.freeze(jsUser); // This will lock the object so no value can be changed in future.
-jsUser.Email = 
+jsUser.Email = "hammadgharja@gmail.com"
 console.log(jsUser);
 
 

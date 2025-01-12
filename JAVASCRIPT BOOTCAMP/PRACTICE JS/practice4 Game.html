@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+         let user = prompt("Enter Snake, Water, Gun")
+         let cpu1 = Math.floor(Math.random()*3) // will generate value betweeen 0, 1, 2
+         let cpu = ["Snake","Water","Gun"][cpu1]
+
+         let match = (user, cpu) => {
+            if (user === cpu) {
+                return "It's a tie"
+            }
+            else if(cpu == "Snake" && user == "Water"){
+                return "CPU wins"
+            }
+            else if(cpu == "Snake" && user == "Gun"){
+                return "User wins"
+            }
+            else if(cpu == "Water"&& user== "Gun"){
+                return "CPU wins"
+            }
+            else if(cpu == "Water"&& user == "Snake"){
+                return "User wins"
+            }
+            else if(cpu == "Gun" &&  user == "Water"){
+                return "User wins"
+            }
+            else if(cpu == "Gun"  && user == "Snake"){
+                return " User wins"
+            }
+         }
+         
+         let result = match(user,cpu)
+         alert(`Cpu is : ${cpu}\n User is: ${user}\n The winner is: ${result}`)
+         
+    </script>
+</body>
+</html>

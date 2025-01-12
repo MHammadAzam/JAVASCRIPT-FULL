@@ -66,65 +66,65 @@
         if (guess < 1 || guess > 100 || isNaN(guess)) {
             alert("Please enter a number between 1 and 100")
         }
-        else{
-           prevGuesses.push(guess)
-           if(numGuess === 11){
-            alert("Game Over! The number was " + numberToGuess)
-            endGame() // Function called
-           }
-           else{
-            displayGuess(guess) // function Called
-            checkguess(guess) // function called
-           }
+        else {
+            prevGuesses.push(guess)
+            if (numGuess === 11) {
+                alert("Game Over! The number was " + numberToGuess)
+                endGame() // Function called
+            }
+            else {
+                displayGuess(guess) // function Called
+                checkguess(guess) // function called
+            }
         }
     }
 
     function checkguess(guess) { // to check if number u guessed is correct or high or low from actual value.
         if (guess === randomNumber) {
-         alert("you guessed it right")
-         endGame()
+            alert("you guessed it right")
+            endGame()
         }
-        else if(guess < randomNumber) {
-           displayMessage("Number is Too Low")
+        else if (guess < randomNumber) {
+            displayMessage("Number is Too Low")
         }
-        else if(guess > randomNumber) {
-           displayMessage("Number is Too High")
+        else if (guess > randomNumber) {
+            displayMessage("Number is Too High")
         }
     }
 
     function displayGuess(guess) { // it will clean values you enter , and update previous guesses.
-         userInput.value = ''
-         guesses.innerHTML +=` ${guess}, `;
-         numGuess++ ;
-         remaining.innerHTML = `${11 - numGuess}`
+        userInput.value = ''
+        guesses.innerHTML += ` ${guess}, `;
+        numGuess++;
+        remaining.innerHTML = `${11 - numGuess}`
     }
 
     function displayMessage(Message) { // pass msg
-       lowOrHigh.innerHTML = `<h2>${Message}</h2>`
+        lowOrHigh.innerHTML = `<h2>${Message}</h2>`
     }
 
     function endGame() {
-         userInput.value = '' //valuee cleaned
-         userInput.setAttribute('disabled', '') // so that no new value should be added.
-         p.classList.add('button')
-         p.innerHTML = '<h2 id="newGame"> Start New Game</h2>'
-         startOver.appendChild(p) // adding a child
-         playGame = false // to stop the game
-         newGame()
+        userInput.value = '' //valuee cleaned
+        userInput.setAttribute('disabled', '') // so that no new value should be added.
+        p.classList.add('button')
+        p.innerHTML = '<h2 id="newGame"> Start New Game</h2>'
+        startOver.appendChild(p) // adding a child
+        playGame = false // to stop the game
+        newGame()
     }
 
     function newGame() {
-    const newGameButton = document.querySelector('#newGame')
-    newGameButton.addEventListener('click', function(e){
-        randomNumber = Math.floor(Math.random() * 100) + 1;
-        prevGuesses = []
-        numGuess = 1
-        guesses.innerHTML = ''
-        remaining.innerHTML = `${11 - numGuess}`
-        userInput.removeAttribute('disabled') 
-        startOver.removeChild(p)
-        playGame = true
-    })
+            const newGameButton = document.querySelector('#newGame')
+            newGameButton.addEventListener('click', function (e) {
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+            prevGuesses = []
+            numGuess = 1
+            guesses.innerHTML = ''
+            remaining.innerHTML = `${11 - numGuess}`
+            userInput.removeAttribute('disabled')
+            startOver.removeChild(p)
+            playGame = true
+        })
     }
 
 

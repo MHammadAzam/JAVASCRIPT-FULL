@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hamdi And Javascript</h1>
+    <button id="stop">STOP</button>
+    <button id="start">START</button>
+</body>
+<script>
+    // The difference between the setinterval and settimeout is:
+    // In setinterval , the function will be called every time the interval is reached.e.g 2000 so after every 2 seconds
+    // In settimeout , the function will be called only once after the time is reached
+
+const saydate = function(){
+           console.log("hammad", Date.now());
+           
+    }
+    // setInterval(saydate, 2000).... Interval set that after 2 seconds the above function will run
+   //clearInterval(intervalId) // clear the above interval and wont run anything
+
+let operation;
+ document.querySelector('#start').addEventListener('click', function(e){
+     
+    operation =setInterval(saydate, 1000);
+    console.log(operation);
+    
+ })
+
+ document.querySelector('#stop').addEventListener('click', function(){
+    clearInterval(operation)
+ })
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Total 6 methods of promise class
+        let p1 = new Promise((resolve, reject)=>{
+               setTimeout(()=>{
+                  resolve("Promise 1 resolved");
+               }, 1000)
+        })
+        let p2 = new Promise((resolve, reject)=>{
+               setTimeout(()=>{
+                  resolve("Promise 2 resolved");
+               }, 2000)
+        })
+        let p3 = new Promise((resolve, reject)=>{
+               setTimeout(()=>{
+                //   resolve("Promise 3 resolved"); uncomment this for promise.all
+                reject(new Error("Error"))
+               }, 3000)
+        })
+        // it will print values of p1 then p2and lastly p3 now if we want to print all values at the same time use promise.all
+        // p1.then((value)=>{
+        //      console.log(value);     
+        // })
+        // p2.then((value)=>{
+        //      console.log(value);     
+        // })
+        // p3.then((value)=>{
+        //      console.log(value);    
+        // })
+// (1)  promise.all = if any of the promise either p1,p2,p3 is rejected then promise.all wont run
+        // let promise_all = Promise.all([p1,p2,p3])
+        // promise_all.then((value)=>{
+            // console.log(value);
+            
+        // })
+// (2)  To print all values without showing error either it is resolved or rejected use promise.allSetteled
+       let promise_all2 = Promise.allSettled([p1,p2,p3])
+       promise_all2.then((value)=>{
+            console.log(value);     // this will show everything like status and value of all promises
+            
+        })
+
+// (3) promise.resolve
+// (4) promise.reject
+
+// (5) promise.race is used to print that promise which is resolved in less time and if any promise is rejected it will directly show error withouut printing any resolved promise
+
+// (6) promise.any is used to print the promise which is resolved in less time and if any promise is rejected it will dirrectly move to next promise without showing error.
+    </script>
+</body>
+</html>

@@ -12,9 +12,12 @@ else{
     console.log("log out");
 }
 
-// IF AND ELSE-IF
-let percentage = 67;
+let a = "45"
+a = Number(a);
+console.log(typeof a);
 
+// IF AND ELSE-IF
+let percentage = 67
 if(percentage>= 70){
 
     console.log("A Grade");
@@ -46,3 +49,4 @@ switch(statusVal)
         console.log("Low User");
     }
 }
+

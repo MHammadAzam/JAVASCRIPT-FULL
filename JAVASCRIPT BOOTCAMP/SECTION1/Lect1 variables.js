@@ -4,7 +4,7 @@
          // variables
          let num1 =10;
          var num2 =24;
-         const num3= 56;   //it is a variable whose value cant be changed in the future.
+         const num3= 56;   // It is a variable whose value cannot be changed in the future.
 
          let res= num1 + num2 + num3;
          console.log(res);
@@ -22,7 +22,7 @@
          //now for many lines to add them use ``
          let mname= "Muhammad";
          let lname= "Azam";
-         let statement=`my name is ${name} middle name is ${mname} last name is ${lname}`; //Called as String interpolation.
+         let statement=`my name is ${mname} middle name is ${name} last name is ${lname}`; //Called as String interpolation.
 
          console.log(statement);
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // ATTACHING MULTIPLE HANDLERS TO A PROMISE
+        // We can attach multiple handlers to a promise using the .then() method
+
+        let p1 = new Promise((resolve, reject)=>{
+              setTimeout(()=>{
+                alert("Hey i am not resolved")
+                resolve(1)
+              },2000)
+              
+        })
+        p1.then((value)=>{
+            console.log("Problem is now resolved");
+            
+        })
+        p1.then((value)=>{
+            console.log("Wowwwww solution solved");
+            
+        })
+    </script>
+</body>
+</html>

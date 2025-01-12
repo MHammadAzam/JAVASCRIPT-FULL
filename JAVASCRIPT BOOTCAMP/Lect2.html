@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bulb{
+            width: 360px;
+            height: 360px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn" onclick="alert('Button1 is clicked')">Click1</button>
+    <button id="btn2" onclick="alert('Button2 is clicked')">Click2</button>
+
+    <div class="bulb" id="bulbing">
+
+    </div>
+
+    <script>
+        // document.getElementById("btn2").addEventListener("click", function(){
+        //         alert('Button1 is clicked')
+        // }) 
+       
+        // document.getElementById("btn2").addEventListener("click", function(){
+        //         alert('Button2 is clicked')
+        // }) 
+
+        // create a sparking bulb type div
+        setInterval( async function() {
+            document.getElementById("bulbing").classList.toggle("bulb")
+        },300)
+
+    </script>
+</body>
+</html>

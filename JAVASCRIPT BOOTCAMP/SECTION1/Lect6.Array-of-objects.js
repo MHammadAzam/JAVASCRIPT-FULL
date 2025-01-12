@@ -5,11 +5,25 @@ console.log(arr);
 arr.pop(9) // Removes Last Element
 arr.unshift(9) // Adds  Element at the beginning of the array
 arr.shift(0) // Removes  the first element of the array
+delete arr[0] // deletes the 0th index element.
+console.log(arr);
+
+let array = [12,34,556,65,45,52,89] 
+array.sort() // it sorts the arrays and also this property changes the original array, so it will be [12,34,45,52,56,65,89]
+console.log(array);
+
+// To get values from ascending order we use the following method
+const compare = (a,b) =>{
+  return a -b // for descending order use : return (b-a)
+}
+array.sort(compare) // it sorts the arrays and also this property changes the original array, so it will be [12,34,45,52,65,89,556]
+console.log(array);
+
 
 console.log(arr.indexOf(3)); // will show index of number
 console.log(arr.includes(11)); // will show if the given number is present in the array or not
 
-const newArray = arr.join(); // join converts array into String and also values are printed without Square Brackets. 
+const newArray = arr.join("-"); // join converts array into String and also values are printed without Square Brackets. 
 console.log(newArray);
 
 console.log("A ", arr);
@@ -27,7 +41,7 @@ console.log(myN2); // In splice  the range is 1 to 3 so it will print 2, 3, 4
 // to combine 2 arrays into 1 array ,  we can use concat() method and also SPREAD  OPERATOR [MOSTLY USED]
 let arr1 = [1, 2, 3]
 let arr2 = [4, 5, 6]
-console.log(arr1.concat(arr2)); // concat used to  combine 2 arrays into 1 array
+console.log(arr1.concat(arr2)); // concat used to  combine 2 arrays into 1 array 
 console.log([...arr1, ...arr2]); // spread operator is used here to combine 2
 
 
