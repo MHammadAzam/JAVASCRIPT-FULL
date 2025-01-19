@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // COOKIES ARE SMALL STRINGS OF DATA STORED DIRECTLY IN THE BROWSER
+        // TO SET YOUR OWN COOKIE USE.
+        document.cookie = "username= HAMMAD77"; // this wont remove other cookies instead it will add this cookie to them.
+        // alert(document.cookie)
+
+        // let key = prompt("Enter a key")
+        // let value = prompt("Enter a value")
+
+        // document.cookie = `${key} = ${value}`
+        console.log(document.cookie);
+
+        // now problem is if you enter value of key containing as a semicolon or special characters it wont show the written value so to solve this problem we use encodeURIComponent()
+        // document.cookie = `${encodeURIComponent(key)} = ${encodeURIComponent(value)}`
+
+        // and then to decode the given value in console we use decodeURIComponent()
+        // decode it in that console area by copying the value you want to decode, it will the value you have written.
+
+
+
+        // *********************** LOCAL STORAGE AND RELATED METHODS *****************************************
+        // IT STORES YOUR DATA  EVEN AFTER PAGE REFRESHING AND CLOSING THE TAB, see it in console log , Application, LocalStorage section.
+       let key1 = prompt("Enter a key")
+       let value1 = prompt("Enter a value")
+       
+       localStorage.setItem(key1, value1)   // this will store the value in local storage
+       console.log(localStorage.getItem(key1)); // to get the value of key1
+
+       console.log(localStorage.removeItem(key1)); // will remove the respective key
+       console.log(localStorage.clear());  // it will clear the whole localStorage
+
+
+       // *********************** SESSION STORAGE AND RELATED METHODS *****************************************
+       
+
+       
+       
+       
+       
+       
+       
+       
+       </script>
+</body>
+</html>
